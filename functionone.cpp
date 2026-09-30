@@ -1,23 +1,29 @@
 #include <iostream>
 using namespace std;
+
+double my_plus(double a, double b);
+double my_minus(double a, double b);
+
 int main(){
-    int n1;
-    int n2;
+    double n1;
+    double n2;
     char c;
-    scanf("%d%c%d", &n1, &c, &n2);
+    scanf("%lf %c %lf", &n1, &c, &n2);
     if(c == '+'){
-        plus(n1, n2);
+        double d1 = my_plus(n1, n2);
+        cout << d1;
     }
     if(c == '-'){
-        minus(n1, n2);
+        double d2 = my_minus(n1, n2);
+        cout << d2;
     }
     return 0;
 }
 
-double plus(double a, double b){
+double my_plus(double a, double b){
     return a + b;
 }
 
-double minus(double a, double b){
+double my_minus(double a, double b){
     return a - b;
 }
